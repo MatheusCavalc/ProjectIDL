@@ -13,4 +13,9 @@ class AppController extends Controller
     {
         return Inertia::render('App/Index');
     }
+
+    public function cards()
+    {
+        return Inertia::render('App/Cards');
+    }
 }

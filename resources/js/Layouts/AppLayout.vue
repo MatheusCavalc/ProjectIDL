@@ -75,7 +75,7 @@ const menu = ref(false)
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/"
+                                <Link href="/cards"
                                     :class="{ 'bg-gray-800 text-lime-500': $page.url == '/cards', 'bg-transparent text-white': $page.url != '/cards' }"
                                     class="block p-2">
                                 <button class="flex items-center gap-2">
@@ -158,11 +158,11 @@ const menu = ref(false)
             <div class="items-center justify-between hidden w-full lg:flex md:block lg:ml-5 md:w-auto lg:order-2"
                 id="navbar-sticky">
                 <ul
-                    class="flex flex-col p-4 mt-4 mr-4 font-medium border border-gray-100 rounded-lg md:p-0 md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                    class="flex flex-col p-4 mt-4 mr-4 font-medium border border-gray-100 rounded-lg md:p-0 md:space-x-2 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
                     <li>
                         <Link href="/"
-                            :class="{ 'bg-gray-800 text-lime-500': $page.url == '/', 'bg-transparent text-white': $page.url != '/' }"
-                            class="block px-2 py-1 rounded">
+                            :class="{ 'bg-gray-800 text-lime-500': $page.url == '/', 'bg-transparent text-white hover:text-lime-700': $page.url != '/' }"
+                            class="block px-4 py-1 rounded-xl">
                         <button class="flex gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-5 h-5 mt-0.5">
@@ -174,9 +174,9 @@ const menu = ref(false)
                         </Link>
                     </li>
                     <li>
-                        <Link href="/"
-                            :class="{ 'bg-gray-800 text-lime-500': $page.url == '/cards', 'bg-transparent text-white': $page.url != '/cards' }"
-                            class="block px-2 py-1 rounded">
+                        <Link href="/cards"
+                            :class="{ 'bg-gray-800 text-lime-500': $page.url == '/cards', 'bg-transparent text-white hover:text-lime-700': $page.url != '/cards' }"
+                            class="block px-4 py-1 rounded-xl">
                         <button class="flex gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-5 h-5 mt-0.5">
@@ -189,8 +189,8 @@ const menu = ref(false)
                     </li>
                     <li>
                         <Link href="/"
-                            :class="{ 'bg-gray-800 text-lime-500': $page.url == '/call', 'bg-transparent text-white': $page.url != '/call' }"
-                            class="block px-2 py-1 rounded">
+                            :class="{ 'bg-gray-800 text-lime-500': $page.url == '/call', 'bg-transparent text-white hover:text-lime-700': $page.url != '/call' }"
+                            class="block px-4 py-1 rounded-xl">
                         <button class="flex gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-5 h-5 mt-0.5">
@@ -203,8 +203,8 @@ const menu = ref(false)
                     </li>
                     <li>
                         <Link href="/"
-                            :class="{ 'bg-gray-800 text-lime-500': $page.url == '/make-legends', 'bg-transparent text-white': $page.url != '/make-legends' }"
-                            class="block px-2 py-1 rounded">
+                            :class="{ 'bg-gray-800 text-lime-500': $page.url == '/make-legends', 'bg-transparent text-white hover:text-lime-700': $page.url != '/make-legends' }"
+                            class="block px-4 py-1 rounded-xl">
                         <button class="flex gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-5 h-5 mt-0.5">
@@ -216,7 +216,7 @@ const menu = ref(false)
                         </Link>
                     </li>
 
-                    <li class="block px-2 py-1 text-white rounded hover:bg-gray-100">
+                    <li class="block px-2 py-1 text-white">
                         |
                     </li>
                 </ul>

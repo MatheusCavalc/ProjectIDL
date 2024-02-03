@@ -18,6 +18,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', [AppController::class, 'index']);
+Route::get('/cards', [AppController::class, 'cards']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
