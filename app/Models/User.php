@@ -42,4 +42,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function collectibleCards()
+    {
+        return $this->belongsToMany(CollectibleCard::class, 'user_collectible_cards', 'user_id', 'collectible_card_id')->withTimestamps();
+    }
 }
