@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Card;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +17,8 @@ class AppController extends Controller
 
     public function cards()
     {
-        return Inertia::render('App/Cards');
+        return Inertia::render('App/Cards', [
+            'cards' => Card::with('player', 'against_1', 'against_2')->get()
+        ]);
     }
 }

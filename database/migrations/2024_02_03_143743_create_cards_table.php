@@ -15,11 +15,18 @@ return new class extends Migration
             $table->id();
             $table->integer('rating');
             $table->string('image');
-            $table->string('played_champion');
-            $table->string('record_with_champion');
+            $table->string('played_champion_1');
+            $table->string('record_with_champion_1');
+            $table->string('played_champion_2');
+            $table->string('record_with_champion_2');
             $table->foreignId('player_id')->constrained();
-            //$table->unsignedBigInteger('player_id');
-            //$table->foreign('player_id')->references('id')->on('players');
+            $table->string('week');
+
+            $table->unsignedBigInteger('against_1');
+            $table->foreign('against_1')->references('id')->on('teams');
+
+            $table->unsignedBigInteger('against_2');
+            $table->foreign('against_2')->references('id')->on('teams');
             $table->timestamps();
         });
     }
