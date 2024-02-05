@@ -34,7 +34,10 @@ class AppController extends Controller
         return Inertia::render('App/Cards', [
             'best' => $highestRating,
             'bests' => $otherRatings,
-            'cards' => Card::with('player', 'against_1', 'against_2')->get()
+            'cards' => Card::with('player', 'player.team', 'against_1', 'against_2')
+                ->where('week', $highestWeek)
+                ->orderByDesc('rating')
+                ->get()
         ]);
     }
 }
