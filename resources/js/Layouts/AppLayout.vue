@@ -6,8 +6,8 @@ const menu = ref(false)
 </script>
 
 <template>
-    <nav class="sticky top-0 z-40 w-full border-b border-gray-200 bg-gradient-to-r from-black to-gray-950">
-        <div class="flex flex-wrap justify-between max-w-screen-xl px-2 py-4 mx-auto lg:p-4">
+    <nav class="fixed top-0 z-40 w-full border-b border-gray-200 bg-gradient-to-r from-black to-gray-950">
+        <div class="flex flex-wrap justify-between px-2 py-4 mx-auto lg:p-4">
 
             <!--Logo and menu aside button-->
             <div class="flex lg:order-1">
@@ -254,7 +254,7 @@ const menu = ref(false)
         </div>
     </nav>
 
-    <div>
+    <div class="mt-16">
         <slot />
     </div>
 </template>
