@@ -23,17 +23,30 @@ console.log(props.cards);
                     <p class="text-3xl font-bold">Cards</p>
                 </div>
 
-                <div>
+                <div class="flex gap-3 mt-1.5">
+                    <div class="flex">
+                        <p class="px-2 h-6 pt-0.5 bg-lime-900 text-xs font-bold text-lime-500 border border-lime-700 rounded-l-full">League</p>
+                        <p class="px-2 h-6 pt-0.5 bg-lime-900 text-xs font-bold text-lime-500 border border-lime-700 rounded-r-full">CBLOL</p>
+                    </div>
 
+                    <div class="flex">
+                        <p class="px-2 h-6 pt-0.5 bg-lime-900 text-xs font-bold text-lime-500 border border-lime-700 rounded-l-full">League</p>
+                        <p class="px-2 h-6 pt-0.5 bg-lime-900 text-xs font-bold text-lime-500 border border-lime-700 rounded-r-full">CBLOL</p>
+                    </div>
+
+                    <div class="flex">
+                        <p class="px-2 h-6 pt-0.5 bg-lime-900 text-xs font-bold text-lime-500 border border-lime-700 rounded-l-full">League</p>
+                        <p class="px-2 h-6 pt-0.5 bg-lime-900 text-xs font-bold text-lime-500 border border-lime-700 rounded-r-full">CBLOL</p>
+                    </div>
                 </div>
             </div>
 
-            <p class="text-white mt-8">Best of Weekend</p>
+            <p class="text-white mt-6">Best of Weekend</p>
 
             <div class="w-full flex gap-8 mt-2">
                 <div class="w-3/5">
                     <div>
-                        <div class="relative w-full h-80 bg-cover rounded-t-lg border-t border-t-red-700"
+                        <div class="relative w-full h-80 bg-cover rounded-t border-t border-t-red-700"
                             :style="{ backgroundImage: `url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${best.played_champion_1}_0.jpg')` }">
                             <img :src="`/storage/${best.image}`" class="absolute bottom-0 left-6 h-48" alt="">
 
@@ -48,7 +61,7 @@ console.log(props.cards);
                         </div>
 
                         <div
-                            class="p-4 bg-transparent rounded-b-lg text-white border-b border-b-indigo-700 flex justify-between">
+                            class="p-4 bg-transparent rounded-b text-white border-b border-b-indigo-700 flex justify-between">
                             <p>{{ best.name }}</p>
 
                             <p>{{ best.position }}</p>
@@ -61,7 +74,7 @@ console.log(props.cards);
                     <div class="grid grid-cols-2 gap-6">
                         <div v-for="(card, index) in bests" :key="card.id">
                             <div :class="{ 'bg-gradient-to-b from-yellow-800 to-yellow-500 border-t border-t-yellow-300': card.max_rating > '89', 'bg-gradient-to-b from-violet-800 to-violet-500 border-t border-t-violet-300': card.max_rating > '79', 'bg-gradient-to-b from-green-800 to-green-500 border-t border-t-green-300': card.max_rating < '79' }"
-                                class="w-full h-32 flex justify-center rounded-t-lg relative">
+                                class="w-full h-32 flex justify-center rounded-t relative">
                                 <img :src="`/storage/${card.image}`" class="h-32" alt="">
 
                                 <div class="absolute top-2 left-3">
@@ -70,7 +83,7 @@ console.log(props.cards);
                             </div>
 
                             <div
-                                class="p-3 bg-transparent rounded-b-lg text-white border-b border-b-indigo-700 flex justify-between">
+                                class="p-3 bg-transparent rounded-b text-white border-b border-b-indigo-700 flex justify-between">
                                 <p>{{ card.name }}</p>
                                 <p>{{ card.position }}</p>
                             </div>
@@ -83,7 +96,7 @@ console.log(props.cards);
                 <div class="flex gap-3">
                     <div class="w-full">
                         <input type="text" id="small-input" placeholder="Search for Player, Team, Position"
-                            class="block bg-black w-full py-2 text-gray-500 border border-gray-700 rounded bg-transparent text-sm">
+                            class="block bg-black w-full py-2 text-gray-300 border border-gray-700 rounded text-sm">
                     </div>
 
                     <div class="text-black">
