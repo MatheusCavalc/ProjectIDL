@@ -42,9 +42,15 @@ class PlayerResource extends Resource
                     ->visibility('public')
                     ->image()
                     ->required(),
-                Forms\Components\TextInput::make('position')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\Select::make('position')
+                    ->options([
+                        'Top' => 'Top',
+                        'Jungle' => 'Jungle',
+                        'Mid' => 'Mid',
+                        'ADC' => 'ADC',
+                        'Support' => 'Support'
+                    ])
+                    ->searchable(),
             ]);
     }
 
